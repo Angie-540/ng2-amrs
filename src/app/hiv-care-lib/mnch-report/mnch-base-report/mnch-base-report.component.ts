@@ -12,7 +12,7 @@ export class MnchBaseReportComponent implements OnInit {
   public params: any;
   public indicators: string;
   public selectedIndicators = [];
-  public mnchReportSummaryData: any = [];
+  public prepReportSummaryData: any = [];
   public columnDefs: any = [];
   public reportName = 'MNCH Report';
   public currentView = 'monthly';
@@ -70,7 +70,7 @@ export class MnchBaseReportComponent implements OnInit {
     this.route.parent.parent.params.subscribe((params: any) => {
       this.storeParamsInUrl(params.location_uuid);
     });
-    this.mnchReportSummaryData = [];
+    this.prepReportSummaryData = [];
     this.getMnchMonthlyReport(this.params);
   }
   public storeParamsInUrl(param) {
@@ -96,7 +96,7 @@ export class MnchBaseReportComponent implements OnInit {
       } else {
         this.showInfoMessage = false;
         this.columnDefs = data.sectionDefinitions;
-        this.mnchReportSummaryData = data.result;
+        this.prepReportSummaryData = data.result;
         this.calculateTotalSummary();
         this.isLoading = false;
         this.showDraftReportAlert(this._month);
@@ -105,11 +105,11 @@ export class MnchBaseReportComponent implements OnInit {
   }
   public calculateTotalSummary() {
     const totalsRow = [];
-    if (this.mnchReportSummaryData.length > 0) {
+    if (this.prepReportSummaryData.length > 0) {
       const totalObj = {
         location: 'Totals'
       };
-      _.each(this.mnchReportSummaryData, (row) => {
+      _.each(this.prepReportSummaryData, (row) => {
         Object.keys(row).map((key) => {
           if (Number.isInteger(row[key]) === true) {
             if (totalObj[key]) {

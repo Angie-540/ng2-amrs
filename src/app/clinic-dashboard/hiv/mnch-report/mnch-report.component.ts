@@ -19,7 +19,7 @@ export class MnchReportComponent
     super(router, route, mnchReport);
   }
   public params: any;
-  public prepReportSummaryData: any = [];
+  public mnchReportSummaryData: any = [];
   public columnDefs: any = [];
 
   public statusError = false;

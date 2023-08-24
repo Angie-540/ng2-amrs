@@ -12,7 +12,7 @@ import { MnchBaseReportComponent } from '../../../hiv-care-lib/mnch-report/mnch-
 @Component({
   selector: 'mnch-base-report',
   templateUrl:
-    '../../../hiv-care-lib/mnch-report/mnch-base-report/mnch-base-report.component'
+    '../../../hiv-care-lib/mnch-report/mnch-base-report/mnch-base-report.component.html'
 })
 export class MnchReportComponent
   extends MnchBaseReportComponent
