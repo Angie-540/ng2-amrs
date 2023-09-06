@@ -20,15 +20,19 @@ export class PreAppointmentOutreachResourceService {
     let urlParams: HttpParams = new HttpParams()
       .set('locationUuids', params.locationUuids)
       .set('yearWeek', params.yearWeek);
-
+    console.log(params.processOutcome, params);
     if (params.processOutcome === 1) {
       urlParams = urlParams.set('successfulOutcome', params.processOutcome);
     }
     if (params.processOutcome === 0) {
       urlParams = urlParams.set('failedOutcome', '1');
     }
+    if (params.processOutcome === 2) {
+      urlParams = urlParams.set('unknownOutcome', '0');
+    }
 
     const url = this.getUrl('ml-weekly-predictions');
+    console.log('ml-poc-side: ', url, urlParams);
     const request = this.http
       .get<any>(url, {
         params: urlParams
