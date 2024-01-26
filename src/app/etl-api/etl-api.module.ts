@@ -45,6 +45,7 @@ import { ClinicFlowResourceService } from './clinic-flow-resource.service';
 import { Covid19ResourceService } from './covid-19-resource-service';
 import { LocationUnitsService } from './location-units.service';
 import { OTZRegisterResourceService } from './otz-register-resource.service';
+import { JuaMtotoWakoResourceService } from 'src/app/etl-api/jua-mtoto-wako-resource.service';
 
 @NgModule({
   imports: [CommonModule, AppSettingsModule],
@@ -95,7 +96,8 @@ import { OTZRegisterResourceService } from './otz-register-resource.service';
     ClinicFlowResourceService,
     Covid19ResourceService,
     LocationUnitsService,
-    OTZRegisterResourceService
+    OTZRegisterResourceService,
+    JuaMtotoWakoResourceService
   ],
   exports: []
 })

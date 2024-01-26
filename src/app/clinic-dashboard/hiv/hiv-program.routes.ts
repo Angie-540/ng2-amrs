@@ -66,7 +66,7 @@ import { Covid19ReportPatientListComponent } from './../../hiv-care-lib/covid-19
 import { PreAppointmentOutreachComponent } from '../general/pre-appointment-outreach/pre-appointment-outreach.component';
 import { RegistersDashboardComponent } from 'src/app/hiv-care-lib/registers/registers-dashboard.component';
 import { OtzRegisterComponent } from 'src/app/hiv-care-lib/registers/otz/otz-registers/otz-register.component';
-
+import { JuaMtotoWakoRegisterComponent } from 'src/app/hiv-care-lib/registers/jua-mtoto-wako/jua-mtoto-wako-register/jua-mtoto-wako-register.component';
 const routes: Routes = [
   {
     path: 'landing-page',
@@ -522,6 +522,10 @@ const routes: Routes = [
       {
         path: 'otz-register',
         component: OtzRegisterComponent
+      },
+      {
+        path: 'jua-mtoto-wako-register',
+        component: JuaMtotoWakoRegisterComponent
       }
     ]
   },

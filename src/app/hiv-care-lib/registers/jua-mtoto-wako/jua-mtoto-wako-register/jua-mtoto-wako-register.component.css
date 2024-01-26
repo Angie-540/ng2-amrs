@@ -1,0 +1,22 @@
+.collapsible-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item-details {
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.jmw-register {
+  border-collapse: collapse;
+  margin: 8px;
+}
+
+.jmw-register th,
+.jmw-register td {
+  border: 1px solid #000000;
+  padding: 0px;
+  text-align: left;
+}

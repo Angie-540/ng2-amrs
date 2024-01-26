@@ -144,7 +144,10 @@ import { TxRttReportBaseComponent } from './tx-rtt-report/tx-rtt-report-base/tx-
 import { TxRttReportPatientListComponent } from './tx-rtt-report/tx-rtt-report-patient-list/tx-rtt-report-patient-list.component';
 import { RegistersDashboardComponent } from './registers/registers-dashboard.component';
 import { OtzRegisterComponent } from './registers/otz/otz-registers/otz-register.component';
-
+import { JuaMtotoWakoRegisterComponent } from './registers/jua-mtoto-wako/jua-mtoto-wako-register/jua-mtoto-wako-register.component';
+import { JuaMtotoWakoPatientListComponent } from './registers/jua-mtoto-wako/jua-mtoto-wako-patient-list/jua-mtoto-wako-patient-list.component';
+import { JuaMtotoWakoTabularViewComponent } from './registers/jua-mtoto-wako/jua-mtoto-wako-tabular-view/jua-mtoto-wako-tabular-view.component';
+import { JuaMtotoWakoFilterComponent } from './registers/jua-mtoto-wako/jua-mtoto-wako-filters/jua-mtoto-wako-filter.component';
 @NgModule({
   imports: [
     RouterModule,
@@ -246,7 +249,11 @@ import { OtzRegisterComponent } from './registers/otz/otz-registers/otz-register
     Covid19TabularViewComponent,
     PrepMonthlyReportViewComponent,
     TxMlReportViewComponent,
-    RegistersDashboardComponent
+    RegistersDashboardComponent,
+    JuaMtotoWakoRegisterComponent,
+    JuaMtotoWakoPatientListComponent,
+    JuaMtotoWakoFilterComponent,
+    JuaMtotoWakoTabularViewComponent
   ],
   declarations: [
     Moh731TabularComponent,
@@ -339,7 +346,11 @@ import { OtzRegisterComponent } from './registers/otz/otz-registers/otz-register
     TxRttReportBaseComponent,
     TxRttReportPatientListComponent,
     RegistersDashboardComponent,
-    OtzRegisterComponent
+    OtzRegisterComponent,
+    JuaMtotoWakoRegisterComponent,
+    JuaMtotoWakoPatientListComponent,
+    JuaMtotoWakoTabularViewComponent,
+    JuaMtotoWakoFilterComponent
   ],
   providers: [
     MOHReportService,
