@@ -37,7 +37,7 @@ export class JuaMtotoWakoFilterComponent implements OnInit, OnChanges {
   public sectionsDef = [];
   public isAggregated: boolean;
   public selectedIndicators = [];
-  public enabledControls = 'monthControl,locationControl,locationTypeControl';
+  public enabledControls = 'monthControl,locationControl';
   public isLoadingReport = false;
   public encounteredError = false;
   public errorMessage = '';
@@ -136,7 +136,7 @@ export class JuaMtotoWakoFilterComponent implements OnInit, OnChanges {
     const queryParams = {
       endDate: Moment(this.endDate).format('YYYY-MM-DD'),
       startDate: Moment(this.startDate).format('YYYY-MM-DD'),
-      locationType: this.selectedLocationType,
+      // locationType: this.selectedLocationType,
       indicators: this.indicators,
       gender: this.gender,
       period: this.period,
@@ -277,15 +277,15 @@ export class JuaMtotoWakoFilterComponent implements OnInit, OnChanges {
 
   public toggleFilterControls(dashboardType: string) {
     if (dashboardType === 'data-analytics') {
-      this.enabledControls = 'monthControl,locationControl,locationTypeControl';
+      this.enabledControls = 'monthControl,locationControl';
     } else if (dashboardType === 'clinic-dashboard') {
-      this.enabledControls = 'monthControl,locationTypeControl';
+      this.enabledControls = 'monthControl';
     } else {
-      this.enabledControls = 'monthControl,locationControl,locationTypeControl';
+      this.enabledControls = 'monthControl,locationControl';
     }
   }
 
-  public locationTypeChange($event) {
-    this.selectedLocationType = $event;
-  }
+  // public locationTypeChange($event) {
+  //   this.selectedLocationType = $event;
+  // }
 }

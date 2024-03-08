@@ -7,6 +7,7 @@ import {
   Output,
   EventEmitter
 } from '@angular/core';
+
 import { ActivatedRoute, Router } from '@angular/router';
 
 interface GridCol {
@@ -59,7 +60,7 @@ export class JuaMtotoWakoTabularViewComponent implements OnInit, OnChanges {
         this.data = [];
         this.data = changes.moh412Data.currentValue;
         this.generateRowData();
-        this.generatePinnedBottomRowDataRow(changes.totalsData.currentValue);
+        // this.generatePinnedBottomRowDataRow(changes.totalsData.currentValue);
       }
     }
   }
@@ -76,7 +77,7 @@ export class JuaMtotoWakoTabularViewComponent implements OnInit, OnChanges {
       {
         headerName: 'S/No',
         width: 150,
-        field: 'reporting_month',
+        field: '',
         pinned: true
       }
     );
